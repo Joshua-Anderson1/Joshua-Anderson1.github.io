@@ -4,10 +4,10 @@
         <title>Joshua's First Website</title>
         <style type="text/css">
             body {
-                background: rgb(125, 198, 205);
+                background: rgb(66, 209, 197);
                 color: rgb(45, 45, 45);
                 padding: 10px;
-                font-family: arial;
+                font-family: comic sans;
             }
             header {
                 font-size: 1.5em;
@@ -83,13 +83,7 @@
     <body>
       <div id="all-contents">
               <nav>
-                    <main>
-            <div class="content">
-                <h1>Portfolio</h1>
-                <ul id="portfolio">
-                </ul>
-            </div>
-        </main>
+                    
             <header>Joshua's First Website</header>
             <ul>
                 <li><a href="index.html">Home</a>
@@ -97,7 +91,15 @@
                 <li><a href="portfolio.html">Portfolio</a>
                 </li>
             </ul>
-        </nav>
+            </nav>
+            <main>
+            <div class="content">
+                <h1>Portfolio</h1>
+                <ul id="portfolio">
+                </ul>
+            </div>
+        </main>
+        
       </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script id="portfolioScript">$(document).ready(function() {$.getJSON('projects/projects.json').then(function(data) { data.projects.forEach(function(project){ $('#portfolio').append('<li><a href="projects/' + project.name + '/">' + project.title + ' : ' + project.description + '</a></li>'); }); }); });</script>
