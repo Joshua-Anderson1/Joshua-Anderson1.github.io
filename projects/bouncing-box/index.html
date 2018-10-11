@@ -16,7 +16,7 @@
 			width: 70px;
 			height: 70px;
 			top: 100px;
-			left: 0px;
+			left: 1000px;
 			background-color: #f48c41;
 			font-size: 300%;
 			text-align: center;
@@ -42,6 +42,7 @@
 			var boardWidth;
 			var update;
 			var handleBoxClick;
+			var boardHeight = $(window).height(); 
 			var direction;
 			direction = 1;
 			// jQuery stuff setup for you
@@ -58,17 +59,22 @@
 			speed = 10;
 			
 			box.css('top', position);      // changes the 'left' css property of the box to value of var position
+			box.css('left', position); 
 			box.text(points);				// changes the text of the box to display the value of var points
 			
 			var update = function() {
 				 position = position + (speed * direction);
-				 if(position > boardWidth - 70) {
+				 if(position > boardHeight - 78){
                  direction = -1;
-				 }
+				 } 
 				 if(position < 0){
 				 direction = 1;
 				 }
+				 if(position > boardWidth - 70){
+				 direction = -1;
+				 }
 				 box.css('top', position);
+				 box.css('left', position); 
 				 box.text(points);
 };
 				// TODO 3 / 6 / 7 / 8
