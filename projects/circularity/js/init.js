@@ -64,7 +64,7 @@ var init = function (window) {
                 circle.y = 0 - circle.radius;
             }
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
-        }
+        };
     
         var update = function() {
             // TODO 4 : Update the circle's position //
@@ -80,7 +80,7 @@ var init = function (window) {
                runner.checkCircleBounds(circle);
            }
 
-        }
+        };
         
         ////////////////////////////////////////////////////////////////////
         // NO CODE BELOW HERE                                             //
@@ -92,7 +92,7 @@ var init = function (window) {
         runner.update = update;
         
         app.addUpdateable(window.opspark.runner);
-    }
+    };
 };
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
