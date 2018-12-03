@@ -31,12 +31,10 @@ var init = function (window) {
             circles.push(circle);
         };
         
-
         // TODO 3 : Call the drawCircle function 5 times //
         for (var i = 0; i < 100; i++){
             drawCircle();
         }
-
         // TODO 7 : Create a Loop to call drawCircle 100 times
 
     
@@ -48,20 +46,20 @@ var init = function (window) {
             
             // if the circle has gone out the right side of the screen then place it off-screen left
             if ( circle.x > canvas.width + circle.radius ) {
-                circle.x = 0 - circle.radius;
+                circle.x = 0;
             } 
             // TODO 5a) if the circle has gone out of the left side of the screen then place it off-screen right
-            else if ( circle.x < circle.radius ) {
+            if ( circle.x < 0 - circle.radius ) {
                 circle.x = canvas.width + circle.radius;
             } 
 
             // TODO 5b) if the circle has gone out of the top side of the screen then place it off-screen bottom
-            if ( circle.y < circle.radius ) {
+            if ( circle.y < 0 - circle.radius) {
                 circle.y = canvas.height + circle.radius;
             }
             // TODO 5c) if the circle has gone out of the bottom side of the screen then place it off-screen top 
-            else if ( circle.y > canvas.height + circle.radius ) {
-                circle.y = 0 - circle.radius;
+            if ( circle.y > canvas.height + circle.radius ) {
+                circle.y = 0;
             }
             // YOUR TODO 5 CODE ENDS HERE //////////////////////////
         };
