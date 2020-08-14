@@ -61,8 +61,8 @@ var level01 = function (window) {
             myReward.y = y;
             game.addGameItem(myReward);
             var rewardImage = draw.bitmap('img/cooldude.jpg');
-            rewardImage.x = -25;
-            rewardImage.y = -25;
+            rewardImage.x = -5;
+            rewardImage.y = -5;
             myReward.addChild(rewardImage);
             myReward.onPlayerCollision = function(){
                 game.changeIntegrity(50);
@@ -79,7 +79,7 @@ var level01 = function (window) {
             number: 1, 
             speed: -3,
             gameItems: [
-                {type: 'sawblade',x:400,y:375},
+                {type: 'sawblade',x:1600,y:375},
                 {type: 'sawblade',x:600,y:475},
                 {type: 'sawblade',x:900,y:385},
                 {type: 'sawblade',x:1100,y:450},
