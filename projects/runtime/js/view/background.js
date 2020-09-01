@@ -75,7 +75,7 @@ var background = function (window) {
             // TODO 4: Part 1 - Add a tree
             tree = draw.bitmap('img/spacyboi.jpg');
             tree.x =canvasWidth;
-            tree.y = groundY;
+            tree.y = groundY - 200;
             background.addChild(tree);
         }
         
